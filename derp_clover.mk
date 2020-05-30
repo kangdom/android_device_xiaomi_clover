@@ -24,26 +24,26 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/clover/device.mk)
 
-# Inherit Carbon GSM telephony parts
-$(call inherit-product, vendor/carbon/config/gsm.mk)
-
-# Inherit Carbon product configuration
-$(call inherit-product, vendor/carbon/config/common.mk)
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Define first api level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
-# CarbonRom Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carbon.maintainer="Rcstar6696"
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+IS_PHONE := true
+TARGET_MINIMAL_APPS := false
+TARGET_INCLUDE_STOCK_ARCORE := false
 
 # Device identifier
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := carbon_clover
+PRODUCT_NAME := derp_clover
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_DEVICE := clover
-PRODUCT_MODEL := MI PAD 4
+PRODUCT_MODEL := MI PAD 4 PLUS
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
