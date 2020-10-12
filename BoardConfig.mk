@@ -34,7 +34,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
-TARGET_KERNEL_CONFIG := clover_defconfig
+TARGET_KERNEL_CONFIG := clover-perf_defconfig
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
